@@ -109,3 +109,7 @@ footer .brand-logo{width:160px}
 }
 /* Blend the seal's dark fill into the burgundy header/footer surface. */
 .brand-logo{mix-blend-mode:lighten}
+
+.action-icon{display:inline-block;width:18px;height:18px;flex-shrink:0;vertical-align:middle}
+.nav-social{display:inline-flex;align-items:center;gap:8px}
+@media(max-width:550px){.nav-social{display:none}}
