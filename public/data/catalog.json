@@ -1,0 +1,148 @@
+{
+  "collection": "Colección navideña 2026",
+  "products": [
+    {
+      "id": "pina",
+      "name": "Piña",
+      "price": 90,
+      "wholesale": 78,
+      "category": "Figuras",
+      "description": "Cítrico · Herbal · Fresco",
+      "size": "8 × 5 cm",
+      "images": [
+        "assets/280.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "pino-mediano",
+      "name": "Pino mediano",
+      "price": 90,
+      "wholesale": 78,
+      "category": "Figuras",
+      "description": "Pino · Madera · Verde fresco",
+      "size": "9.5 × 6 cm",
+      "images": [
+        "assets/271.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "pino-chico",
+      "name": "Pino chico",
+      "price": 90,
+      "wholesale": 78,
+      "category": "Figuras",
+      "description": "Pino · Madera · Verde fresco",
+      "size": "9 × 5 cm",
+      "images": [
+        "assets/289.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "pino-encantado",
+      "name": "Pino encantado",
+      "price": 190,
+      "wholesale": null,
+      "category": "En vaso",
+      "description": "Cítrico · Herbal · Fresco",
+      "size": "12.5 × 9 cm",
+      "images": [
+        "assets/312.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "bosque-grande",
+      "name": "Bosque encantado grande",
+      "price": 190,
+      "wholesale": null,
+      "category": "En vaso",
+      "description": "Pino · Madera · Verde fresco",
+      "size": "15 × 9 cm",
+      "images": [
+        "assets/303.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "bosque-mediano",
+      "name": "Bosque encantado mediano",
+      "price": 155,
+      "wholesale": null,
+      "category": "En vaso",
+      "description": "Pino · Madera · Verde fresco",
+      "size": "14 × 7 cm",
+      "images": [
+        "assets/321.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "noche-nevada",
+      "name": "Noche nevada",
+      "price": 170,
+      "wholesale": null,
+      "category": "En vaso",
+      "description": "Pay de limón · Galleta dulce",
+      "size": "8.5 × 9 cm",
+      "images": [
+        "assets/347.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "noche-diciembre",
+      "name": "Noche de diciembre",
+      "price": 170,
+      "wholesale": null,
+      "category": "En vaso",
+      "description": "Lavanda · Floral · Aromático",
+      "size": "8.5 × 9 cm",
+      "images": [
+        "assets/338.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "paquete-1",
+      "name": "Paquete 1",
+      "price": 220,
+      "wholesale": null,
+      "category": "Paquetes",
+      "description": "2 pinos de diferentes modelos y 1 piña",
+      "size": "",
+      "images": [
+        "assets/373.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "paquete-2",
+      "name": "Paquete 2",
+      "price": 225,
+      "wholesale": null,
+      "category": "Paquetes",
+      "description": "3 pinos del mismo modelo",
+      "size": "",
+      "images": [
+        "assets/364.jpg"
+      ],
+      "available": true
+    },
+    {
+      "id": "paquete-3",
+      "name": "Paquete 3",
+      "price": 260,
+      "wholesale": null,
+      "category": "Paquetes",
+      "description": "3 piñas del mismo modelo",
+      "size": "",
+      "images": [
+        "assets/382.jpg"
+      ],
+      "available": true
+    }
+  ]
+}
