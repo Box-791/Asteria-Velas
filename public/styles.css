@@ -13,3 +13,19 @@ h1,h2,h3,.eyebrow,.brand{color:var(--pink)}
 .ordering .button:hover{background:var(--pink);color:var(--ink)}
 dialog h2,dialog .eyebrow,dialog .detail-info p{color:var(--ink)}
 .thumbs button{border-color:#411b2044}
+
+/* Original Asteria artwork and ordering cards, from the supplied references. */
+.brand-logo{display:block;width:110px;height:auto}.brand small{margin-top:8px}
+.star{display:inline-block;width:24px;height:24px;object-fit:contain;vertical-align:middle;flex-shrink:0}
+.announcement>.star{width:12px;height:12px;margin:0 18px}
+.hero-note>.star{margin-right:7px}.photo-caption>.star{width:28px;height:28px;align-self:center}
+.values .star{width:14px;height:14px}.section-heading h2 .star{width:30px;height:30px}
+footer .brand-logo{width:90px}
+.steps{gap:18px;text-align:center;align-items:stretch}
+.steps article{padding:34px 24px;border:1px solid #411b2026;display:flex;flex-direction:column;align-items:center}
+.steps article:nth-child(2){background:var(--pink);border-color:var(--pink)}
+.steps article>.step-label{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:4px;margin:0 0 16px;color:var(--ink)}
+.steps article>.step-number{font-family:var(--serif);font-style:italic;font-size:48px;line-height:1;width:76px;height:76px;border:1px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ink)}
+.steps h3{font-style:italic;font-size:30px;margin:24px 0 12px}.steps p{font-size:13px;margin:0;line-height:1.85}
+@media(max-width:800px){.steps{gap:12px}.steps article{padding:26px 18px}.steps h3{font-size:27px}}
+@media(max-width:550px){.brand-logo{width:78px}.announcement>.star{margin:0 8px}.values .star{width:12px;height:12px}.steps{gap:16px}.steps article{padding:30px 22px}.steps article>.step-label,.steps article>.step-number{position:static}.steps h3{margin-top:22px;font-size:30px}.steps p{margin:0;font-size:13px}footer .brand-logo{width:80px}}
