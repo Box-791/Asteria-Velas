@@ -91,3 +91,21 @@ footer{font-size:14px}
  .detail-info h2{font-size:38px}
  .detail-info .price{font-size:24px}
 }
+
+/* Larger branding and a platform-independent detail chevron. */
+.brand-logo{width:180px}
+header{padding-block:18px}
+footer .brand-logo{width:160px}
+.detail-link{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;min-height:36px}
+.detail-chevron{display:block;flex-shrink:0;width:18px;height:18px}
+@media(max-width:550px){
+ header{flex-direction:column;gap:18px;padding-block:18px 22px}
+ header .brand-logo{width:160px}
+ header nav{justify-content:center;flex-wrap:wrap;gap:24px}
+ footer{justify-content:center;text-align:center;gap:24px}
+ footer .brand-logo{width:150px}
+ footer>a:last-child{width:100%}
+ .detail-link{gap:10px;min-height:40px}
+}
+/* Blend the seal's dark fill into the burgundy header/footer surface. */
+.brand-logo{mix-blend-mode:lighten}
