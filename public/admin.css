@@ -9,3 +9,10 @@
 .batch-panel .error,.batch-panel .success{color:var(--ink)!important}
 .batch-item{border:1px solid #411b2026}.batch-picker{background:#ed9da226}
 .admin input[type=checkbox]{accent-color:var(--pink)}
+
+/* Larger labels and inputs also keep mobile browsers from zooming forms. */
+.admin label{font-size:16px}
+.admin input,.admin textarea{font-size:16px}
+.batch-panel p{font-size:15px}
+.batch-picker{font-size:16px!important}
+#photo-list button{font-size:14px;color:var(--cream);min-height:40px}

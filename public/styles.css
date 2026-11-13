@@ -29,3 +29,65 @@ footer .brand-logo{width:90px}
 .steps h3{font-style:italic;font-size:30px;margin:24px 0 12px}.steps p{font-size:13px;margin:0;line-height:1.85}
 @media(max-width:800px){.steps{gap:12px}.steps article{padding:26px 18px}.steps h3{font-size:27px}}
 @media(max-width:550px){.brand-logo{width:78px}.announcement>.star{margin:0 8px}.values .star{width:12px;height:12px}.steps{gap:16px}.steps article{padding:30px 22px}.steps article>.step-label,.steps article>.step-number{position:static}.steps h3{margin-top:22px;font-size:30px}.steps p{margin:0;font-size:13px}footer .brand-logo{width:80px}}
+
+/* Readable type and consistent product-photo alignment at every screen size. */
+body{font-size:16px}
+nav{font-size:15px}
+.announcement{font-size:12px;line-height:1.7}
+.eyebrow,.hero .eyebrow{font-size:12px}
+.hero-copy>p:not(.eyebrow){font-size:17px}
+.button{font-size:16px}
+.hero-note{font-size:14px}
+.values{font-size:14px}
+h2{font-size:52px}
+.section-heading>p,.wholesale-note{font-size:15px}
+.chip{font-size:14px;min-height:44px}
+.search input{font-size:16px;width:250px}
+.count{font-size:14px}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;min-width:0}
+.card-photo{width:100%;flex-shrink:0}
+.card-photo img{display:block;object-position:center}
+.card-title{min-width:0}
+.card h3{font-size:32px;line-height:1.15;overflow-wrap:anywhere}
+.price{font-size:18px}
+.card p{font-size:15px;line-height:1.65;margin:10px 0 16px}
+.card-bottom{font-size:13px;gap:12px;align-items:end;margin-top:auto;padding-top:8px}
+.card-bottom span:last-child{flex-shrink:0}
+.tag{font-size:12px;letter-spacing:.5px}
+.steps p{font-size:16px}
+.steps article>.step-label{font-size:12px}
+footer{font-size:14px}
+.detail-info p{font-size:16px}
+.detail-info .price{font-size:24px}
+@media(max-width:800px){
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .section-heading{align-items:start}
+ .section-heading>p{max-width:220px}
+ .values{gap:5%;font-size:13px}
+ h2{font-size:44px}
+}
+@media(max-width:550px){
+ nav{font-size:14px;gap:15px}
+ .announcement{font-size:10px;letter-spacing:1px;padding-inline:15px}
+ .hero-copy>p:not(.eyebrow){font-size:16px}
+ .hero-copy .desktop{display:none}
+ .hero-note{font-size:13px}
+ .values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;font-size:12px;text-align:center;line-height:1.6}
+ .values>span{display:flex;flex-direction:column;align-items:center;gap:5px}
+ .section-heading>p{max-width:none}
+ h2,.ordering h2{font-size:40px}
+ #categories{gap:8px}
+ .chip{padding:10px 15px}
+ .grid{gap:32px 14px}
+ .card-photo{aspect-ratio:4/5}
+ .card h3{font-size:28px}
+ .card .price{font-size:18px;margin-top:10px}
+ .card p{font-size:15px}
+ .card-bottom{font-size:13px;flex-direction:column;align-items:start;gap:12px}
+ .tag{font-size:11px;padding:6px 8px}
+ .steps p{font-size:16px}
+ .detail-image{display:block;height:auto;max-height:55vh;aspect-ratio:auto;object-fit:contain;margin-inline:auto}
+ .detail-info h2{font-size:38px}
+ .detail-info .price{font-size:24px}
+}
