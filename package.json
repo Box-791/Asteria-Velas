@@ -1,1 +1,9 @@
-{"name":"asteria-velas","private":true,"version":"1.0.0","scripts":{"check":"node tools/check.mjs && node --check public/app.js && node --check public/admin.js","dev":"python3 -m http.server 4173 --directory public"}}
+{
+  "name": "asteria-velas",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "check": "node tools/check.mjs && node --check public/app.js && node --check public/admin.js && node tools/check-api.mjs",
+    "dev": "python3 -m http.server 4173 --directory public"
+  }
+}

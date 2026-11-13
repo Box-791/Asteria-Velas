@@ -4,7 +4,23 @@ let token='',branch='',head='',catalog=null,selected=null,dirty=false,busy=false
 const pending=new Map();
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function status(s,error=false){$('#status').textContent=s;$('#status').className=error?'error':'success'}
-async function api(path,method='GET',body){const r=await fetch(`https://api.github.com/repos/${repo}/${path}`,{method,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});if(!r.ok){let message='';try{message=(await r.json()).message}catch{}throw Error(`GitHub (${r.status}): ${message||'No se pudo completar la operación.'}`)}return r.status===204?null:r.json()}
+async function api(path,method='GET',body){
+ const url=`https://api.github.com/repos/${repo}${path?`/${path}`:''}`;
+ let r;
+ try{
+  r=await fetch(url,{method,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});
+ }catch{
+  throw Error('No se pudo conectar con GitHub. Revisa tu conexión a Internet y vuelve a intentar. Si continúa, prueba abrir esta página en otro navegador.');
+ }
+ if(!r.ok){
+  let message='';try{message=(await r.json()).message}catch{}
+  if(r.status===401)throw Error('GitHub no aceptó el token. Comprueba que esté completo y no haya caducado.');
+  if(r.status===403)throw Error(`GitHub rechazó el acceso (403). Revisa los permisos del token o el límite de solicitudes. ${message}`);
+  if(r.status===404)throw Error('GitHub no encontró el recurso (404). Comprueba que el token tenga acceso a Box-791/Asteria-Velas.');
+  throw Error(`GitHub (${r.status}): ${message||'No se pudo completar la operación.'}`);
+ }
+ return r.status===204?null:r.json();
+}
 function encode(s){const bytes=new TextEncoder().encode(s);let binary='';for(const b of bytes)binary+=String.fromCharCode(b);return btoa(binary)}
 function decode(s){return new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s/g,'')),c=>c.charCodeAt(0)))}
 $('#login').onsubmit=async e=>{e.preventDefault();token=$('#token').value.trim();$('#token').value='';e.submitter.disabled=true;try{status('Conectando…');const info=await api('');if(!info.permissions?.push)throw Error('Esta cuenta no tiene permiso para editar el repositorio.');branch=info.default_branch;head=(await api(`git/ref/heads/${encodeURIComponent(branch)}`)).object.sha;const file=await api(`contents/public/data/catalog.json?ref=${head}`);catalog=JSON.parse(decode(file.content));$('#connect').hidden=true;$('#workspace').hidden=false;status('Conectado. Selecciona una vela o agrega una nueva.');list()}catch(err){token='';status(err.message,true)}finally{e.submitter.disabled=false}};
