@@ -24,6 +24,10 @@ La administradora necesita una cuenta de GitHub con permiso de escritura en este
 3. En **Repository permissions**, permitir **Contents: Read and write**. Elegir una fecha de caducidad y generar el token.
 4. Copiar el token en el campo de conexión del administrador. No enviarlo por mensajes, no guardarlo en archivos del proyecto ni compartirlo con clientes. El editor lo guarda solo en memoria; al recargar o cerrar la pestaña deberá conectarse de nuevo. Si caduca, generar otro.
 
+### Subir varias velas a la vez
+
+En el administrador, abrir **Subir varias velas**. Configurar precio, categoría y descripción comunes si se desean. Seleccionar una foto por vela (hasta 20 por selección); el nombre inicial se obtiene del archivo y se puede cambiar. Revisar o completar los datos de cada vela, quitar las que no correspondan y pulsar **Agregar lote al catálogo**. Después, pulsar **Publicar cambios**: todas las velas y fotos se guardan en un solo commit. Para agregar varias fotografías del mismo producto, usar el editor individual. Los lotes pendientes también se pierden al cerrar la pestaña; agregarlos y publicarlos antes de salir.
+
 ### Editar y publicar
 
 1. Seleccionar una vela o pulsar **Agregar vela**.
