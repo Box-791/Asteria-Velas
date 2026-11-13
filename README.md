@@ -1,8 +1,21 @@
 # Asteria Velas
 
-Catálogo en español para GitHub Pages. Incluye las 11 velas y paquetes de la colección navideña 2026, con fotografías, precios y condiciones de pedido extraídos del PDF original. Los pedidos se realizan por Instagram: [@asteriavelascln](https://www.instagram.com/asteriavelascln/).
+Catálogo en español publicado en Cloudflare Pages, con una copia en GitHub Pages. Incluye las 11 velas y paquetes de la colección navideña 2026, con fotografías, precios y condiciones de pedido extraídos del PDF original. Los pedidos se realizan por Instagram: [@asteriavelascln](https://www.instagram.com/asteriavelascln/).
 
-## Publicar
+## Publicar en Cloudflare Pages
+
+Dirección principal para compartir: **https://asteriavelas.pages.dev/**.
+
+El proyecto `asteriavelas` está conectado a `Box-791/Asteria-Velas`. Cada push a `main` publica automáticamente el catálogo sin comprar un dominio. Configuración:
+
+- Rama de producción: `main`.
+- Comando de validación: `npm run check`.
+- Carpeta publicada: `public`.
+- Las credenciales de Cloudflare se mantienen fuera del repositorio.
+
+Para actualizar productos directamente, agregar las fotos en `public/assets/` y editar `public/data/catalog.json`. Subir los cambios a `main` y esperar a que el despliegue de Cloudflare termine correctamente. El estado se consulta en **Cloudflare → Workers & Pages → asteriavelas → Deployments**.
+
+## Copia en GitHub Pages
 
 1. En el repositorio, abrir **Settings → Pages**.
 2. En **Build and deployment → Source**, seleccionar **GitHub Actions**.
@@ -13,7 +26,7 @@ Solo se publica `public/`; el PDF original no se sube al repositorio.
 
 ## Actualizar productos sin editar código
 
-Abrir `https://box-791.github.io/Asteria-Velas/admin.html`.
+Abrir `https://asteriavelas.pages.dev/admin.html`. El editor es opcional; también se puede actualizar el catálogo directamente en el repositorio.
 
 ### Conexión inicial
 
@@ -35,7 +48,7 @@ En el administrador, abrir **Subir varias velas**. Configurar precio, categoría
 3. Agregar una o varias fotos JPEG, PNG o WebP (máximo 20 MB por foto). Se reducen a un máximo de 1600 píxeles y se convierten a JPEG. Elegir **Portada** para cambiar la foto principal; **Quitar** la retira del producto.
 4. Usar **Visible en el catálogo** para mostrar u ocultar un producto. **Eliminar vela** lo elimina del borrador.
 5. Pulsar **Guardar en borrador** y después **Publicar cambios**. Los borradores viven en la pestaña actual: publicar antes de cerrarla.
-6. Esperar unos minutos a que GitHub Actions actualice el catálogo. El historial y estado están en la pestaña **Actions** del repositorio.
+6. Esperar unos minutos a que Cloudflare publique el catálogo. El estado está en **Cloudflare → Workers & Pages → asteriavelas → Deployments**. La copia de GitHub Pages se publica mediante GitHub Actions.
 
 La publicación crea un solo commit con los productos y las fotos nuevas. Evita sobrescribir cambios de otra sesión: si el repositorio cambió, el editor pedirá reconectar. Las fotos retiradas dejan de mostrarse pero permanecen en el historial del repositorio. La ruta `/admin.html` es pública, pero leerla no da permisos de escritura: GitHub valida el token para cada operación.
 
